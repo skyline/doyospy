@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.doyospy</groupId>
+        <artifactId>doyospy</artifactId>
+        <version>0.1</version>
+    </parent>
+
+    <artifactId>doyospy-core</artifactId>
+    <name>${project.artifactId}</name>
+    <description>Doyospy核心，包括集合、字符串、Bean等工具</description>
+
+    <properties>
+        <Automatic-Module-Name>com.doyospy.core</Automatic-Module-Name>
+    </properties>
+
+</project>

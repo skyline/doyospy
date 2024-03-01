@@ -3,7 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.doyospy</groupId>
   <artifactId>doyospy</artifactId>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
+  <modules>
+    <module>doyospy-core</module>
+  </modules>
   <version>0.1</version>
   <name>doyospy</name>
   <url>http://maven.apache.org</url>
@@ -11,6 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <Automatic-Module-Name>com.doyospy</Automatic-Module-Name>
     <java.version>8</java.version>
     <spring-boot.version>2.6.2</spring-boot.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -89,12 +94,13 @@
   </distributionManagement>
 
   <build>
-    <finalName>doyospy</finalName>
+<!--    <finalName>doyospy</finalName>-->
     <plugins>
       <!-- 编译插件，设置源码以及编译的jdk版本 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
         <configuration>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
@@ -113,6 +119,26 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <archive>
+            <index>true</index>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+            </manifest>
+            <manifestEntries>
+              <Build-OS>${os.name}</Build-OS>
+              <Built-By>${user.name}</Built-By>
+              <Build-Jdk>${java.version}</Build-Jdk>
+              <Build-Timestamp>${maven.build.timestamp}</Build-Timestamp>
+              <Automatic-Module-Name>${Automatic-Module-Name}</Automatic-Module-Name>
+            </manifestEntries>
+          </archive>
+        </configuration>
       </plugin>
       <!-- Javadoc 文档生成插件-->
       <plugin>
