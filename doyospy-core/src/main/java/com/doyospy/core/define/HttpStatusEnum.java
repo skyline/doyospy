@@ -22,6 +22,7 @@ public enum HttpStatusEnum {
     BAD_METHOD(405, "请求方法有误"),
     CONFLICT(409, "请求的资源与资源的当前状态发生冲突"),
     UNSUPPORTED_MEDIA_TYPE(415, "请求的媒体类型不支持"),
+    DUPLICATE_REQUEST(422, "请求的资源与资源的当前状态发生冲突"),
     ERROR(500, "服务器内部错误"),
     NOT_IMPLEMENTED(501, "接口未实现"),
     WARN(601, "系统警告消息"),

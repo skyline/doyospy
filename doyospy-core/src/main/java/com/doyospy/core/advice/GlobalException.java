@@ -22,9 +22,9 @@ public class GlobalException {
 
     /**
      * 权限校验异常
-     * @param e
-     * @param request
-     * @return
+     * @param   e           错误
+     * @param   request     请求
+     * @return  结果集
      */
     @ExceptionHandler(AccessDeniedException.class)
     public ResponseResult<Void> handleAccessDeniedException(AccessDeniedException e, HttpServletRequest request) {
@@ -35,9 +35,9 @@ public class GlobalException {
 
     /**
      * 请求方式不支持异常
-     * @param e
-     * @param request
-     * @return
+     * @param   e           错误
+     * @param   request     请求
+     * @return  结果集
      */
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public ResponseResult<Void> handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException e, HttpServletRequest request) {
@@ -48,9 +48,9 @@ public class GlobalException {
 
     /**
      * 未知的运行时异常
-     * @param e
-     * @param request
-     * @return
+     * @param   e           错误
+     * @param   request     请求
+     * @return  结果集
      */
     @ExceptionHandler(RuntimeException.class)
     public ResponseResult<Void> handleRuntimeException(RuntimeException e, HttpServletRequest request) {
@@ -61,9 +61,9 @@ public class GlobalException {
 
     /**
      * 系统异常
-     * @param e
-     * @param request
-     * @return
+     * @param   e           错误
+     * @param   request     请求
+     * @return  结果集
      */
     @ExceptionHandler(Exception.class)
     public ResponseResult<Void> handleException(Exception e, HttpServletRequest request) {
@@ -74,9 +74,9 @@ public class GlobalException {
 
     /**
      * 绑定异常
-     * @param e
-     * @param request
-     * @return
+     * @param   e           错误
+     * @param   request     请求
+     * @return  结果集
      */
     @ExceptionHandler(BindException.class)
     public ResponseResult<Void> handleBindException(BindException e, HttpServletRequest request) {
@@ -87,9 +87,9 @@ public class GlobalException {
 
     /**
      * 参数校验异常
-     * @param e
-     * @param request
-     * @return
+     * @param   e           错误
+     * @param   request     请求
+     * @return  结果集
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Object handleMethodArgumentNotValidException(MethodArgumentNotValidException e, HttpServletRequest request) {
