@@ -7,7 +7,7 @@
   <modules>
     <module>doyospy-core</module>
   </modules>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
   <name>doyospy</name>
   <url>http://maven.apache.org</url>
   <description>Doyospy component for Spring Boot</description>
