@@ -1,25 +1,25 @@
-//package com.doyospy.core.util;
-//
-//import java.io.Serializable;
-//import java.util.Date;
-//import java.util.HashMap;
-//import java.util.Map;
-//import java.util.Objects;
-//
-///**
-// * 身份证号工具类
-// * @author  Robin
-// */
-//public class IdcardUtil {
-//    private static final int CHINA_ID_MIN_LENGTH = 15;
-//    private static final int CHINA_ID_MAX_LENGTH = 18;
-//    private static final int[] POWER = new int[]{7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
-//    private static final Map<String, String> CITY_CODES = new HashMap();
-//    private static final Map<Character, Integer> TW_FIRST_CODE = new HashMap();
-//
-//    public IdcardUtil() {
-//    }
-//
+package com.doyospy.core.util;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
+/**
+ * 身份证号工具类
+ * @author  Robin
+ */
+public class IdcardUtil {
+    private static final int CHINA_ID_MIN_LENGTH = 15;
+    private static final int CHINA_ID_MAX_LENGTH = 18;
+    private static final int[] POWER = new int[]{7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
+    private static final Map<String, String> CITY_CODES = new HashMap();
+    private static final Map<Character, Integer> TW_FIRST_CODE = new HashMap();
+
+    public IdcardUtil() {
+    }
+
 //    public static String convert15To18(String idCard) {
 //        if (idCard.length() != 15) {
 //            return null;
@@ -43,7 +43,7 @@
 //    public static String convert18To15(String idCard) {
 //        return StrUtil.isNotBlank(idCard) && isValidCard18(idCard) ? idCard.substring(0, 6) + idCard.substring(8, idCard.length() - 1) : idCard;
 //    }
-//
+
 //    public static boolean isValidCard(String idCard) {
 //        if (StrUtil.isBlank(idCard)) {
 //            return false;
@@ -474,4 +474,4 @@
 //            return "Idcard{provinceCode='" + this.provinceCode + '\'' + ", cityCode='" + this.cityCode + '\'' + ", birthDate=" + this.birthDate + ", gender=" + this.gender + ", age=" + this.age + '}';
 //        }
 //    }
-//}
+}
