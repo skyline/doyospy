@@ -27,7 +27,7 @@ public class PageData<T> {
     /**
      * 总数量
      */
-    private Integer total;
+    private Integer totalCount;
 
     /**
      * 数据列表
