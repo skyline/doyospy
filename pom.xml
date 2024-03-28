@@ -6,8 +6,9 @@
   <packaging>pom</packaging>
   <modules>
     <module>doyospy-core</module>
+    <module>doyospy-all</module>
   </modules>
-  <version>0.1.5</version>
+  <version>0.1.6</version>
   <name>doyospy</name>
   <url>http://maven.apache.org</url>
   <description>Doyospy component for Spring Boot</description>
