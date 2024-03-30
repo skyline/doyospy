@@ -3,8 +3,8 @@ package com.doyospy.core.lang;
 import java.util.function.Supplier;
 
 /**
- * 断言<br/>
- * 断言某些对象或值是否符合规定，否则抛出异常，经常用于做变量检查
+ * 断言工具类
+ * PS：用于抛出在检查时为真的断言，断言某些对象或值是否符合规定，否则抛出异常，经常用于做变量检查
  * @author  Robin
  */
 public class Assert {
