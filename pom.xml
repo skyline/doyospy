@@ -8,7 +8,7 @@
     <module>doyospy-core</module>
     <module>doyospy-all</module>
   </modules>
-  <version>0.1.6</version>
+  <version>0.1.7</version>
   <name>doyospy</name>
   <url>http://maven.apache.org</url>
   <description>Doyospy component for Spring Boot</description>
@@ -23,6 +23,7 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.url>https://github.com/skyline/doyospy.git</project.url>
     <server.id>ossrh</server.id>
+    <hashids.version>1.0.3</hashids.version>
   </properties>
 
   <developers>
@@ -58,6 +59,11 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.hashids</groupId>
+      <artifactId>hashids</artifactId>
+      <version>${hashids.version}</version>
     </dependency>
 
 <!--    <dependency>-->
