@@ -26,12 +26,15 @@ public class RestResponseAdvice implements ResponseBodyAdvice<Object> {
 
     @Override
     public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> converterType) {
-        return returnType.hasMethodAnnotation(RestResponse.class);
+        return returnType.hasMethodAnnotation(RestResponse.class) ||
+            returnType.getDeclaringClass().isAnnotationPresent(RestResponse.class);
     }
 
     @SneakyThrows
     @Override
-    public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
+    public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType,
+                                  Class<? extends HttpMessageConverter<?>> selectedConverterType,
+                                  ServerHttpRequest request, ServerHttpResponse response) {
         if (body instanceof String) {
             return objectMapper.writeValueAsString(ResponseResult.success(body));
         }
