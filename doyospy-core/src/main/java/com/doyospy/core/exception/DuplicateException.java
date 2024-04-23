@@ -24,7 +24,7 @@ public class DuplicateException extends BaseException {
      */
     public DuplicateException(String msg) {
         this.msg = msg;
-        this.code = HttpStatusEnum.DUPLICATE_REQUEST.getCode();
+        this.code = HttpStatusEnum.LOCKED.getCode();
     }
 
     /**

@@ -43,7 +43,7 @@ public class GlobalException {
     public ResponseResult<Void> handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException e, HttpServletRequest request) {
         String requestURI = request.getRequestURI();
         log.error("请求地址'{}', 不支持'{}'请求，请联系管理员！", requestURI, e.getMethod());
-        return ResponseResult.error(HttpStatusEnum.BAD_METHOD.getCode(), HttpStatusEnum.BAD_METHOD.getMsg());
+        return ResponseResult.error(HttpStatusEnum.METHOD_NOT_ALLOWED.getCode(), HttpStatusEnum.METHOD_NOT_ALLOWED.getMsg());
     }
 
     /**

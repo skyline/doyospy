@@ -3,6 +3,10 @@ package com.doyospy.core.define;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * HTTP状态码
+ * @author  Robin
+ */
 @Getter
 @AllArgsConstructor
 public enum HttpStatusEnum {
