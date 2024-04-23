@@ -57,4 +57,7 @@ public abstract class AbstractDateBasic implements DateBasic, Serializable {
         return locale;
     }
 
+    public int hasCode() {
+        return pattern.hashCode() + 13 * (timeZone.hashCode() + 13 * locale.hashCode());
+    }
 }
