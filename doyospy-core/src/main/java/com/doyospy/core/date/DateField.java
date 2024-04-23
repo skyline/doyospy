@@ -81,7 +81,7 @@ public enum DateField {
 
     /**
      * 获取枚举值
-     * @return
+     * @return  枚举值
      */
     public int getValue() {
         return this.value;
